@@ -11,7 +11,7 @@
     <script src="lib/vendor/jquery-confirm/jquery-confirm.min.js"></script>
     <style>
         .AppBody{
-            position:relative;
+            position:absolute;
             width:100%;
             margin:0;
             padding:0;
