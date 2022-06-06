@@ -9,7 +9,13 @@
 
     <link rel="stylesheet" href="lib/vendor/jquery-confirm/jquery-confirm.min.css">
     <script src="lib/vendor/jquery-confirm/jquery-confirm.min.js"></script>
-
+    <style>
+        .AppBody{
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+    </style>
   </head>
   <body>
     <div class="AppBody"></div>
