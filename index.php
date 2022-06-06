@@ -6,6 +6,10 @@
     <title>Bootstrap demo</title>
     <link href="lib/vendor/bootstrap5/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="lib/vendor/jquery3.6/jquery.min.js" ></script>
+
+    <link rel="stylesheet" href="lib/vendor/jquery-confirm/jquery-confirm.min.css">
+    <script src="lib/vendor/jquery-confirm/jquery-confirm.min.js"></script>
+
   </head>
   <body>
     <h1 id="opc">Olá Mundo</h1>
@@ -15,7 +19,7 @@
     <script>
         $(function(){
             $("#opc").click(function(){
-                alert('Ação com Jquery Instalado!');
+                $.alert('Dados com o popup Jquery-Confirm');
             });
         })
     </script>
