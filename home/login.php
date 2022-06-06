@@ -26,7 +26,7 @@
 
         <main class="text-center form-signin w-100 m-auto">
         <form>
-            <i class="bi bi-cloud-plus-fill"></i>
+            <i class="fa-solid fa-cloud-plus"></i>
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div class="form-floating">
