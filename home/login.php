@@ -22,8 +22,8 @@
         border-top-right-radius: 0;
     }
 </style>
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
+<div class="row justify-content-center">
+    <div class="col-3">
 
         <main class="text-center form-signin w-100 m-auto">
         <form>
