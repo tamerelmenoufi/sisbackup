@@ -30,7 +30,7 @@
     }
 </style>
 <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-4">
 
         <main class="form-signin w-100 m-auto">
         <form>
