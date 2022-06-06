@@ -21,7 +21,7 @@
         border-top-right-radius: 0;
     }
 </style>
-<div class="justify-content-center">
+<div class="row justify-content-center" style="margin:0 !important; padding:0 !important;">
     <div class="col-3">
 
         <main class="text-center form-signin w-100 m-auto">
