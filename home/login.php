@@ -26,25 +26,25 @@
 
         <main class="text-center form-signin w-100 m-auto">
         <form>
-            <i class="fa-solid fa-cloud-arrow-up" style="font-size:75px;"></i>
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <i class="fa-solid fa-cloud-arrow-up" style="font-size:75px; color:green"></i>
+            <h1 class="h3 mb-3 fw-normal">Login de Acesso</h1>
 
             <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@exemplo.com">
+            <label for="floatingInput">E-mail/Login</label>
             </div>
             <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+            <label for="floatingPassword">Senha</label>
             </div>
 
             <div class="checkbox mb-3">
             <label>
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="remember-me"> Manter conectado
             </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button>
+            <p class="mt-5 mb-3 text-muted">&copy; Sistema Mohatron de Backup - <?=date("Y")?></p>
         </form>
         </main>
 
