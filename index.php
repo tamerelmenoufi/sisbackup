@@ -12,12 +12,18 @@
 
   </head>
   <body>
-    <h1 id="opc">Olá Mundo</h1>
-    Aqui entram os dados do sistema!!!
+    <div class="AppBody"></div>
     <script src="lib/vendor/bootstrap5/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
     <script>
         $(function(){
+
+            $.ajax({
+                url:"home/login.php",
+                success:function(dados){
+                    $(".AppBody").html(dados);
+                }
+            });
+
             $("#opc").click(function(){
                 $.alert('Dados com o popup Jquery-Confirm');
             });
