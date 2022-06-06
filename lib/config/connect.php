@@ -1,3 +1,3 @@
 <?php
     include("appinc/AppIncludes.php");
-    AppConnect();
+    $con = AppConnect();
