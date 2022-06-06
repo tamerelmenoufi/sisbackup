@@ -26,7 +26,7 @@
 
         <main class="text-center form-signin w-100 m-auto">
         <form>
-            <img class="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <i class="bi bi-cloud-plus-fill"></i>
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div class="form-floating">
