@@ -25,7 +25,6 @@
     <div class="col-3">
 
         <main class="text-center form-signin w-100 m-auto">
-        <form>
             <i class="fa-solid fa-cloud-arrow-up" style="font-size:75px; color:green"></i>
             <h1 class="h3 mb-3 fw-normal">Login de Acesso</h1>
 
@@ -43,10 +42,26 @@
                 <input type="checkbox" value="remember-me"> Manter conectado
             </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button>
+            <button class="acessar w-100 btn btn-lg btn-primary" type="button">Acessar</button>
             <p class="mt-5 mb-3 text-muted">&copy; Sistema Mohatron de Backup - <?=date("Y")?></p>
-        </form>
         </main>
 
     </div>
 </div>
+
+<script>
+    $(function(){
+
+        $("button.acessar").click(function(){
+
+            $.ajax({
+                url:"home/index.php",
+                success:function(dados){
+                    $(".AppBody").html(dados);
+                }
+            });
+
+        });
+
+    })
+</script>
