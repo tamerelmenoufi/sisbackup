@@ -11,12 +11,11 @@
     <script src="lib/vendor/jquery-confirm/jquery-confirm.min.js"></script>
     <style>
         .AppBody{
-            position:absolute;
+            position:relative;
             width:100%;
             height:auto;
             margin:0;
             padding:0;
-            border:solid 1px red;
         }
     </style>
   </head>
