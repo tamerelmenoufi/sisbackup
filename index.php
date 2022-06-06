@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="lib/vendor/jquery-confirm/jquery-confirm.min.css">
     <script src="lib/vendor/jquery-confirm/jquery-confirm.min.js"></script>
+
+    <link href="lib/vendor/fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+
     <style>
         .AppBody{
             position:relative;
