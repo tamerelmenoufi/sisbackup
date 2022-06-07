@@ -6,7 +6,7 @@
         $diretorio = dir($path);
          while($arquivo = $diretorio->read()){
             if($arquivo != '.' and $arquivo != '..'){
-                echo "<a href='".$path.$arquivo."'>".$arquivo."</a><br />";
+                echo "<a href='".$l.$arquivo."' target='_blank'>".$arquivo."</a><br />";
             }
          }
          $diretorio -> close();
