@@ -10,8 +10,9 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Local</th>
+                        <th>Arquivo</th>
                         <th>Data</th>
+                        <th>Versões</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,6 +22,9 @@
                     <tr>
                         <td><?=$d->local?></td>
                         <td><?=$d->data?></td>
+                        <td>
+                            <?=Versoes(md5($d->local))?>
+                        </td>
                     </tr>
                     <?php
                     }
