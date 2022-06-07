@@ -23,7 +23,10 @@
                         <td><?=$d->local?></td>
                         <td><?=$d->data?></td>
                         <td>
-
+                            <?php
+                                $l = md5($d->local);
+                                Versoes($l);
+                            ?>
                         </td>
                     </tr>
                     <?php
