@@ -58,6 +58,9 @@
                 url:"home/index.php",
                 success:function(dados){
                     $(".AppBody").html(dados);
+                },
+                error:function(){
+                    $.alert('Erro na página!');
                 }
             });
 
