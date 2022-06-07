@@ -29,7 +29,7 @@
         $(function(){
 
             $.ajax({
-                url:"home/login.php",
+                url:"home/<?=(($_SESSION['backupUser'])?'index':'login')?>.php",
                 success:function(dados){
                     $(".AppBody").html(dados);
                 }

@@ -9,7 +9,7 @@
             echo json_encode($retorno);
             $_SESSION['backupUser'] = mysqli_fetch_object($result)->codigo;
         }else{
-            $retorno = ['status' => false, 'msg' => 'Erro nos dados de acesso' .$query];
+            $retorno = ['status' => false, 'msg' => 'Erro nos dados de acesso'];
             echo json_encode($retorno);
         }
         exit();
@@ -73,34 +73,38 @@
         $("button.acessar").click(function(){
             login = $("#login").val();
             senha = $("#senha").val();
-            $.ajax({
-                url:"home/login.php",
-                type:"POST",
-                dataType:"JSON",
-                data:{
-                    login,
-                    senha
-                },
-                success:function(dados){
-                    $.alert(dados.msg);
-                    if(dados.status){
-                        $.ajax({
-                            url:"home/index.php",
-                            success:function(dados){
-                                $(".AppBody").html(dados);
-                            },
-                            error:function(){
-                                $.alert('Erro na página!');
-                            }
-                        });
-                    }else{
-                        $.alert('Erro no acesso, favor confira os seus dados!');
+            if(login && senha){
+                $.ajax({
+                    url:"home/login.php",
+                    type:"POST",
+                    dataType:"JSON",
+                    data:{
+                        login,
+                        senha
+                    },
+                    success:function(dados){
+                        $.alert(dados.msg);
+                        if(dados.status){
+                            $.ajax({
+                                url:"home/index.php",
+                                success:function(dados){
+                                    $(".AppBody").html(dados);
+                                },
+                                error:function(){
+                                    $.alert('Erro na página!');
+                                }
+                            });
+                        }else{
+                            $.alert('Erro no acesso, favor confira os seus dados!');
+                        }
+                    },
+                    error:function(){
+                        $.alert('Erro na página!');
                     }
-                },
-                error:function(){
-                    $.alert('Erro na página!');
-                }
-            });
+                });
+            }else{
+                $.alert('Favor informe seus dados de acesso!');
+            }
 
         });
 
