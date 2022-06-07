@@ -83,7 +83,6 @@
                         senha
                     },
                     success:function(dados){
-                        $.alert(dados.msg);
                         if(dados.status){
                             $.ajax({
                                 url:"home/index.php",
