@@ -9,7 +9,7 @@
             echo json_encode($retorno);
             $_SESSION['backupUser'] = mysqli_fetch_object($result)->codigo;
         }else{
-            $retorno = ['status' => false, 'msg' => 'Erro nos dados de acesso'];
+            $retorno = ['status' => false, 'msg' => 'Erro nos dados de acesso' .$query];
             echo json_encode($retorno);
         }
         exit();
@@ -82,7 +82,7 @@
                     senha
                 },
                 success:function(dados){
-                    alert(dados.status);
+                    $.alert(dados.msg);
                     if(dados.status){
                         $.ajax({
                             url:"home/index.php",
