@@ -26,7 +26,7 @@
                             <?php
                                 $l = md5($d->local);
                             ?>
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                            <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <?=Versoes($l)?>
                                 <!-- <li><a class="dropdown-item" href="#">Action</a></li>
