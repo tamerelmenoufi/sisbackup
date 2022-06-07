@@ -1,3 +1,21 @@
+<?php
+    include("../lib/config/includes.php");
+
+    if($_POST['login'] && $_POST['senha']){
+        $query = "select * from usuarios where login = '{$_POST['login']}' and senha = '".md5($_POST['senha'])."' and situacao = '1' limit 1";
+        $result = mysqli_query($con, $query);
+        if(mysqli_num_rows($result)){
+            $retorno = ['staus' => true, 'msg' => 'Dados confirmados com sucesso'];
+            echo json_encode($retorno);
+            $_SESSION['backupUser'] = mysqli_fetch_object($result)->codigo;
+        }else{
+            $retorno = ['staus' => false, 'msg' => 'Erro nos dados de acesso'];
+            echo json_encode($retorno);
+        }
+        exit();
+    }
+
+?>
 <style>
 
     .form-signin {
@@ -29,12 +47,12 @@
             <h1 class="h3 mb-3 fw-normal">Login de Acesso</h1>
 
             <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@exemplo.com">
-            <label for="floatingInput">E-mail/Login</label>
+            <input type="text" class="form-control" id="login" placeholder="Digite seu login">
+            <label for="login">E-mail/Login</label>
             </div>
             <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-            <label for="floatingPassword">Senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            <label for="senha">Senha</label>
             </div>
 
             <div class="checkbox mb-3">
@@ -53,11 +71,30 @@
     $(function(){
 
         $("button.acessar").click(function(){
-
+            login = $("#login").val();
+            senha = $("#senha").val();
             $.ajax({
-                url:"home/index.php",
+                url:"home/login.php",
+                type:"POST",
+                dataType:"JSON",
+                data:{
+                    login,
+                    senha
+                },
                 success:function(dados){
-                    $(".AppBody").html(dados);
+                    if(dados.status){
+                        $.ajax({
+                            url:"home/index.php",
+                            success:function(dados){
+                                $(".AppBody").html(dados);
+                            },
+                            error:function(){
+                                $.alert('Erro na página!');
+                            }
+                        });
+                    }else{
+                        $.alert('Erro no acesso, favor confira os seus dados!');
+                    }
                 },
                 error:function(){
                     $.alert('Erro na página!');
