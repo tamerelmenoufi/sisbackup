@@ -23,7 +23,7 @@
                         <td><?=$d->local?></td>
                         <td><?=$d->data?></td>
                         <td>
-                            <?=Versoes(md5($d->local))?>
+
                         </td>
                     </tr>
                     <?php
