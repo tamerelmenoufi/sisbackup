@@ -27,6 +27,15 @@
                                 $l = md5($d->local);
                                 Versoes($l);
                             ?>
+
+<ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+</ul>
+
                         </td>
                     </tr>
                     <?php
