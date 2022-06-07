@@ -44,9 +44,6 @@
                 }
             });
 
-            $("#opc").click(function(){
-                $.alert('Dados com o popup Jquery-Confirm');
-            });
         })
     </script>
 
