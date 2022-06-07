@@ -1,7 +1,7 @@
 <?php
     include("../lib/config/includes.php");
 
-    $query = "select * from tarefas where data <= NOW() order by data desc limit 100";
+    $query = "select * from tarefas where data <= NOW() order by data desc limit 10";
     $result = mysqli_query($con, $query);
 ?>
 <div class="container">
