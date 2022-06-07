@@ -1,5 +1,5 @@
 <?php
-    include("../lib/config/includes.php");
+    include("lib/config/includes.php");
 
     if($_GET['sair']){
         $_SESSION = [];
