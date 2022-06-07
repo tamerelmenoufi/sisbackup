@@ -1,3 +1,12 @@
+<?php
+    include("../lib/config/includes.php");
+
+    if($_GET['sair']){
+        $_SESSION = [];
+        header("location:./");
+        exit();
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
