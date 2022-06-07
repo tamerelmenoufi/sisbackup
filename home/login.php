@@ -5,11 +5,11 @@
         $query = "select * from usuarios where login = '{$_POST['login']}' and senha = '".md5($_POST['senha'])."' and situacao = '1' limit 1";
         $result = mysqli_query($con, $query);
         if(mysqli_num_rows($result)){
-            $retorno = ['staus' => true, 'msg' => 'Dados confirmados com sucesso'];
+            $retorno = ['status' => true, 'msg' => 'Dados confirmados com sucesso'];
             echo json_encode($retorno);
             $_SESSION['backupUser'] = mysqli_fetch_object($result)->codigo;
         }else{
-            $retorno = ['staus' => false, 'msg' => 'Erro nos dados de acesso'];
+            $retorno = ['status' => false, 'msg' => 'Erro nos dados de acesso'];
             echo json_encode($retorno);
         }
         exit();
@@ -82,6 +82,7 @@
                     senha
                 },
                 success:function(dados){
+                    alert(dados.status);
                     if(dados.status){
                         $.ajax({
                             url:"home/index.php",
