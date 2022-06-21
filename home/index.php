@@ -22,7 +22,7 @@
 
 
                         $pos = strripos($d->local, '/');
-                        $local = substr($d->local, $pos, strlen($d->local));
+                        $local = substr($d->local, ($pos + 1), strlen($d->local));
 
                     ?>
                     <tr>
