@@ -16,9 +16,16 @@
          $query = "select * from versoes where dir = '{$l}' order by data desc";
          $result = mysqli_query($con, $query);
          while($d = mysqli_fetch_object($result)){
-            echo "<li><a class=\"dropdown-item\" href=\"../sisbk/versoes/".$d->dir.'/'.$d->file."\" target='_blank'>Versão em ".$d->data."</a></li>";
+            echo "<li><a class=\"dropdown-item\" href=\"../sisbk/versoes/".$d->dir.'/'.$d->file."\" target='_blank'>Versão em ".dataBr($d->data)."</a></li>";
          }
 
 
 
+    }
+
+    function dataBr($d){
+        list($dt, $h) = explode(" ",$d);
+        list($a, $m, $d) = explode("-",$dt);
+
+        return "{$d}/{$m}/{$a} {$h}";
     }

@@ -27,7 +27,7 @@
                     ?>
                     <tr>
                         <td title="Local Absoluto: <?=$d->local?>"><?=$local?></td>
-                        <td><?=$d->data?></td>
+                        <td><?=dataBr($d->data)?></td>
                         <td>
                             <?php
                                 $l = md5($d->local);
