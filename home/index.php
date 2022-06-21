@@ -19,9 +19,14 @@
                 <tbody>
                     <?php
                     while($d = mysqli_fetch_object($result)){
+
+
+                        $pos = strripos($d->local, '/');
+                        $local = substr($d->local, $pos, strlen($d->local));
+
                     ?>
                     <tr>
-                        <td><?=$d->local?></td>
+                        <td><?=$local?></td>
                         <td><?=$d->data?></td>
                         <td>
                             <?php
