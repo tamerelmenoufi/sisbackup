@@ -13,7 +13,7 @@
 
          global $con;
 
-         $query = "select * from versoes where dir = '{$l}' order by data desc";
+         echo $query = "select * from versoes where dir = '{$l}' order by data desc";
          $result = mysqli_query($query);
          while($d = mysqli_fetch_object($result)){
             echo "<li><a class=\"dropdown-item\" href=\"../sisbk/versoes/".$d->dir.'/'.$d->file."\" target='_blank'>Versão em ".$d->data."</a></li>";
