@@ -4,10 +4,10 @@
     $query = "select * from tarefas where data <= NOW() order by data desc limit 100";
     $result = mysqli_query($con, $query);
 ?>
-<a href="?sair=1" class="btn btn-danger" style="margin:20px;">Sair</a>
 <div class="container">
     <div class="row">
         <div clas="col">
+            <a href="?sair=1" class="btn btn-danger" style="margin:20px;">Sair</a>
             <table class="table">
                 <thead>
                     <tr>
