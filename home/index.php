@@ -26,7 +26,7 @@
 
                     ?>
                     <tr>
-                        <td><?=$local?></td>
+                        <td title="Local Absoluto:\n<?=$d->local?>"><?=$local?></td>
                         <td><?=$d->data?></td>
                         <td>
                             <?php
